@@ -1,10 +1,15 @@
+import { app } from "./graph/graph"
 
-import { ChatOpenAI } from "@langchain/openai"
-
-const llm = new ChatOpenAI({
-  model: "gpt-5.4-nano-2026-03-17",
-})
-async function initializeModal()
+async function main()
 {
-     //modal call will come  
+     const result = await app.invoke({
+      messages: [{ role: "user", content:"hiii" }],
+    })
+    console.log(JSON.stringify(result.messages,null,2))
 }
+main()
+
+
+
+
+
