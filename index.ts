@@ -7,10 +7,10 @@ dbConnection()
 async function main()
 {
      const result = await app.invoke({
-      messages: [{ role: "user", content:"give all expense of this month" }],
+      messages: [{ role: "user", content:"generate expense chart for this year" }],
     },config)
-
-    console.log(JSON.stringify(result.messages,null,2))
+    console.log('result',JSON.stringify(result,null,2))
+    //console.log(result.messages[result.messages.length-1]?.content)
 }
 main()
 

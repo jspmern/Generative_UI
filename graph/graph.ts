@@ -1,5 +1,5 @@
 
-import { MemorySaver, StateGraph } from "@langchain/langgraph";
+import { END, MemorySaver, StateGraph } from "@langchain/langgraph";
  import { llm } from "../modal/llm"
 import { StateAnnotation } from "../state/State"
 import { expenseTracker } from "../tool/tools";
@@ -21,13 +21,30 @@ async function initializeModal(state:typeof StateAnnotation.State)
     return {messages:response}
     
 }
+
+async function whereShouldGo(state:typeof StateAnnotation.State){
+const lastMessage=state.messages[state.messages.length-1]
+//console.log('p',lastMessage)
+if(lastMessage.tool_calls?.length)
+{
+    return "toolNode"
+}
+  return END
+}
+async function ShouldGoAI(state:typeof StateAnnotation.State){
+   return "initialize"
+}
 const toolNode= new ToolNode(expenseTracker())
 
  const graph= new StateGraph(StateAnnotation)
 .addNode("initialize",initializeModal)
 .addNode("toolNode",toolNode)
 .addEdge("__start__","initialize")
-.addEdge("initialize","toolNode")
-.addEdge("toolNode","__end__")
+.addConditionalEdges("initialize",whereShouldGo,{
+    "toolNode":"toolNode",
+  "__end__":END
+}).addConditionalEdges("toolNode",ShouldGoAI,{
+   initialize:"initialize",
+})
 const app =graph.compile({ checkpointer })
 export {app}

@@ -32,7 +32,6 @@ const createExpense = tool(
 
  const getExpense=tool(async({from,to})=>{
     if(!from || !to ) return "Somthing error please retry"
-    console.log(from, to)
    const fetchResult= await  expense.find({
     purchaseDate: {
       $gte: from,
@@ -48,5 +47,106 @@ const createExpense = tool(
      to: z.string().describe("this is  for to which date"),
     }),
   })
-  return [createExpense,getExpense]
+ const getChart = tool(
+  async ({ type, startDate, endDate }) => {
+    let groupId = {};
+    let projectStage = {};
+
+    if (type === "day") {
+      groupId = {
+        year: { $year: "$purchaseDate" },
+        month: { $month: "$purchaseDate" },
+        day: { $dayOfMonth: "$purchaseDate" },
+      };
+
+      projectStage = {
+        label: {
+          $concat: [
+            { $toString: "$_id.day" },
+            "-",
+            { $toString: "$_id.month" },
+          ],
+        },
+        expense: "$totalAmount",
+      };
+    }
+
+    if (type === "week") {
+      groupId = {
+        year: { $year: "$purchaseDate" },
+        week: { $isoWeek: "$purchaseDate" }, // ✅ better than $week
+      };
+
+      projectStage = {
+        label: {
+          $concat: ["Week ", { $toString: "$_id.week" }],
+        },
+        expense: "$totalAmount",
+      };
+    }
+
+    if (type === "month") {
+      groupId = {
+        year: { $year: "$purchaseDate" },
+        month: { $month: "$purchaseDate" },
+      };
+
+      projectStage = {
+        month: {
+          $arrayElemAt: [
+            [
+              "", "January", "February", "March", "April", "May",
+              "June", "July", "August", "September", "October",
+              "November", "December"
+            ],
+            "$_id.month",
+          ],
+        },
+        expense: "$totalAmount",
+      };
+    }
+
+    const result = await expense.aggregate([
+      {
+        $addFields: {
+          purchaseDate: { $toDate: "$purchaseDate" },
+        },
+      },
+      {
+        $match: {
+          purchaseDate: {
+            $gte: new Date(startDate),
+            $lte: new Date(endDate),
+          },
+        },
+      },
+      {
+        $group: {
+          _id: groupId,
+          totalAmount: { $sum: "$price" },
+        },
+      },
+      {
+        $sort: { "_id.year": 1, "_id.month": 1, "_id.day": 1 },
+      },
+      {
+        $project: projectStage, // ✅ format for chart
+      },
+    ]);
+
+    console.log("chart result", result);
+
+    return `ToolResult: ${JSON.stringify(result)}`;
+  },
+  {
+    name: "getChart",
+    description: "get chart for expense",
+    schema: z.object({
+      type: z.enum(["day", "week", "month"]),
+      startDate: z.string(),
+      endDate: z.string(),
+    }),
+  }
+);
+  return [createExpense,getExpense,getChart]
 }
