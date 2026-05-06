@@ -136,7 +136,7 @@ const createExpense = tool(
 
     console.log("chart result", result);
 
-    return `ToolResult: ${JSON.stringify(result)}`;
+    return JSON.stringify({data:result,type:"chart"});
   },
   {
     name: "getChart",

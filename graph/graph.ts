@@ -24,7 +24,6 @@ async function initializeModal(state:typeof StateAnnotation.State)
 
 async function whereShouldGo(state:typeof StateAnnotation.State){
 const lastMessage=state.messages[state.messages.length-1]
-//console.log('p',lastMessage)
 if(lastMessage.tool_calls?.length)
 {
     return "toolNode"
@@ -32,7 +31,10 @@ if(lastMessage.tool_calls?.length)
   return END
 }
 async function ShouldGoAI(state:typeof StateAnnotation.State){
-   return "initialize"
+    const lastMessage=state.messages[state.messages.length-1]
+    const type=JSON.parse(lastMessage.content)?.type
+     if(type==="chart") return END
+     return "initialize"
 }
 const toolNode= new ToolNode(expenseTracker())
 
@@ -45,6 +47,7 @@ const toolNode= new ToolNode(expenseTracker())
   "__end__":END
 }).addConditionalEdges("toolNode",ShouldGoAI,{
    initialize:"initialize",
+    __end__:END
 })
 const app =graph.compile({ checkpointer })
 export {app}
