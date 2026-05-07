@@ -1,9 +1,8 @@
 import React from 'react'
+import { ChatContainer } from './component/ChatContainer';
 
 function App() {
-  return (
-    <div className='bg-sky-900'>App</div>
-  )
+   return <ChatContainer />;
 }
 
 export default App
