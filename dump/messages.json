@@ -1,0 +1,1016 @@
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "202",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "202",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "6",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "6",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "-",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "-",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "05",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "05",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "-",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "-",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "06",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "06",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "T",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "T",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "23",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "23",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": ":",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": ":",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "59",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "59",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": ":",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": ":",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "59",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "59",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": ".",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": ".",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "999",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "999",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "Z",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "Z",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "\"}",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "\"}",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {},
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [],
+  "invalid_tool_calls": []
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  AIMessageChunk {
+  "id": "chatcmpl-Dclz0x2CLgqK7GB6xQglvD7DJA3kV",
+  "content": "",
+  "additional_kwargs": {},
+  "response_metadata": {
+    "usage": {
+      "prompt_tokens": 284,
+      "completion_tokens": 55,
+      "total_tokens": 339,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    }
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [],
+  "invalid_tool_calls": [],
+  "usage_metadata": {
+    "input_tokens": 284,
+    "output_tokens": 55,
+    "total_tokens": 339,
+    "input_token_details": {
+      "audio": 0,
+      "cache_read": 0
+    },
+    "output_token_details": {
+      "audio": 0,
+      "reasoning": 0
+    }
+  }
+}, {
+    tags: [],
+    name: undefined,
+    ls_integration: "langchain_chat_model",
+    thread_id: "1",
+    langgraph_step: 1,
+    langgraph_node: "initialize",
+    langgraph_triggers: [ "branch:to:initialize" ],
+    langgraph_path: [ "__pregel_pull", "initialize" ],
+    langgraph_checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    checkpoint_ns: "initialize:17a9be18-278b-5c53-beae-8efc064b95e5",
+    ls_provider: "openai",
+    ls_model_name: "gpt-5.4-nano-2026-03-17",
+    ls_model_type: "chat",
+    ls_temperature: undefined,
+    ls_max_tokens: undefined,
+    ls_stop: undefined,
+    versions: {
+      "@langchain/core": "1.1.41",
+      "@langchain/openai": "1.4.4",
+    },
+  }
+]
+chunk [
+  ToolMessage {
+  "id": "6496a21a-7cfd-44d1-8e17-900ed01b9c74",
+  "content": "{\"data\":[{\"_id\":{\"year\":2026,\"month\":5,\"day\":6},\"label\":\"6-5\",\"expense\":35000}],\"type\":\"chart\"}",
+  "name": "getChart",
+  "additional_kwargs": {},
+  "response_metadata": {},
+  "tool_call_id": "call_FfUmNJM0DF3Iogmd6MVr2S0J"
+}, {
+    tags: [ "graph:step:2" ],
+    name: "toolNode",
+    ls_integration: "langgraph",
+    thread_id: "1",
+    langgraph_step: 2,
+    langgraph_node: "toolNode",
+    langgraph_triggers: [ "branch:to:toolNode" ],
+    langgraph_path: [ "__pregel_pull", "toolNode" ],
+    langgraph_checkpoint_ns: "toolNode:2bc39620-a02f-5e8a-9b16-c0c251868f8a",
+    checkpoint_ns: "toolNode:2bc39620-a02f-5e8a-9b16-c0c251868f8a",
+  }
+]

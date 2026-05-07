@@ -1,0 +1,69 @@
+
+chunk [ "custom", "custom msg >>>>>>>>>>>>>>>>>>>>>" ]
+chunk [ "updates", {
+    initialize: {
+      messages: AIMessage {
+  "id": "chatcmpl-DcmFnx5xGFIVHe2xSdswJjX4wf5oF",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "id": "call_P9MxbF82o38XA56hVfYsPE8D",
+        "type": "function",
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "tokenUsage": {
+      "promptTokens": 284,
+      "completionTokens": 55,
+      "totalTokens": 339
+    },
+    "finish_reason": "tool_calls",
+    "model_provider": "openai",
+    "model_name": "gpt-5.4-nano-2026-03-17"
+  },
+  "tool_calls": [
+    {
+      "name": "getChart",
+      "args": {
+        "type": "day",
+        "startDate": "2026-05-06T00:00:00.000Z",
+        "endDate": "2026-05-06T23:59:59.999Z"
+      },
+      "type": "tool_call",
+      "id": "call_P9MxbF82o38XA56hVfYsPE8D"
+    }
+  ],
+  "invalid_tool_calls": [],
+  "usage_metadata": {
+    "output_tokens": 55,
+    "input_tokens": 284,
+    "total_tokens": 339,
+    "input_token_details": {
+      "audio": 0,
+      "cache_read": 0
+    },
+    "output_token_details": {
+      "audio": 0,
+      "reasoning": 0
+    }
+  }
+},
+    },
+  } ]
+chunk [ "updates", {
+    toolNode: {
+      messages: [
+        ToolMessage {
+  "id": "4ce5a50f-23b7-4e69-90d1-9e5aef1b2e3c",
+  "content": "{\"data\":[{\"_id\":{\"year\":2026,\"month\":5,\"day\":6},\"label\":\"6-5\",\"expense\":35000}],\"type\":\"chart\"}",
+  "name": "getChart",
+  "additional_kwargs": {},
+  "response_metadata": {},
+  "tool_call_id": "call_P9MxbF82o38XA56hVfYsPE8D"
+}
+      ],
+    },
+  } ]

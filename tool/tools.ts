@@ -134,7 +134,7 @@ const createExpense = tool(
       },
     ]);
 
-    console.log("chart result", result);
+    //console.log("chart result", result);
 
     return JSON.stringify({data:result,type:"chart"});
   },

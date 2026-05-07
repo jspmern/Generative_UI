@@ -1,0 +1,288 @@
+chunk {
+  config: {
+    configurable: {
+      checkpoint_ns: "",
+      thread_id: "1",
+      checkpoint_id: "1f149da3-56d2-66c0-ffff-657bc7e9036e",
+    },
+    metadata: {
+      ls_integration: "langgraph",
+      thread_id: "1",
+    },
+    recursion_limit: 25,
+    tags: [],
+  },
+  values: {
+    messages: [],
+  },
+  metadata: {
+    source: "input",
+    step: -1,
+    parents: {},
+  },
+  next: [ "__start__" ],
+  tasks: [
+    {
+      id: "3e1752f5-dfc8-546c-afaa-40684d716a85",
+      name: "__start__",
+      path: [ "__pregel_pull", "__start__" ],
+      interrupts: [],
+      result: undefined,
+    }
+  ],
+  parentConfig: undefined,
+}
+chunk {
+  config: {
+    configurable: {
+      checkpoint_ns: "",
+      thread_id: "1",
+      checkpoint_id: "1f149da3-56fe-65e0-8000-a8d0b8b7e616",
+    },
+    metadata: {
+      ls_integration: "langgraph",
+      thread_id: "1",
+    },
+    recursion_limit: 25,
+    tags: [],
+  },
+  values: {
+    messages: [
+      HumanMessage {
+  "id": "c7a827a9-90ac-47c8-bc56-0db3c70c19e8",
+  "content": "give graph for yestruday expense",
+  "additional_kwargs": {},
+  "response_metadata": {}
+}
+    ],
+  },
+  metadata: {
+    source: "loop",
+    step: 0,
+    parents: {},
+  },
+  next: [ "initialize" ],
+  tasks: [
+    {
+      id: "b1a9c1d1-f762-5954-a99e-005c774ba795",
+      name: "initialize",
+      path: [ "__pregel_pull", "initialize" ],
+      interrupts: [],
+      result: undefined,
+    }
+  ],
+  parentConfig: {
+    configurable: {
+      checkpoint_ns: "",
+      thread_id: "1",
+      checkpoint_id: "1f149da3-56d2-66c0-ffff-657bc7e9036e",
+    },
+    metadata: {
+      ls_integration: "langgraph",
+      thread_id: "1",
+    },
+    recursion_limit: 25,
+    tags: [],
+  },
+}
+chunk {
+  config: {
+    configurable: {
+      checkpoint_ns: "",
+      thread_id: "1",
+      checkpoint_id: "1f149da3-6606-6060-8001-d053df1dd05f",
+    },
+    metadata: {
+      ls_integration: "langgraph",
+      thread_id: "1",
+    },
+    recursion_limit: 25,
+    tags: [],
+  },
+  values: {
+    messages: [
+      HumanMessage {
+  "id": "c7a827a9-90ac-47c8-bc56-0db3c70c19e8",
+  "content": "give graph for yestruday expense",
+  "additional_kwargs": {},
+  "response_metadata": {}
+}, AIMessage {
+  "id": "chatcmpl-Dcm5inIY9lQxYYfpFU7QQgyqqM15l",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "id": "call_RNj0zaboEgfvNViZC0KIAtRX",
+        "type": "function",
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "tokenUsage": {
+      "promptTokens": 284,
+      "completionTokens": 55,
+      "totalTokens": 339
+    },
+    "finish_reason": "tool_calls",
+    "model_provider": "openai",
+    "model_name": "gpt-5.4-nano-2026-03-17"
+  },
+  "tool_calls": [
+    {
+      "name": "getChart",
+      "args": {
+        "type": "day",
+        "startDate": "2026-05-06T00:00:00.000Z",
+        "endDate": "2026-05-06T23:59:59.999Z"
+      },
+      "type": "tool_call",
+      "id": "call_RNj0zaboEgfvNViZC0KIAtRX"
+    }
+  ],
+  "invalid_tool_calls": [],
+  "usage_metadata": {
+    "output_tokens": 55,
+    "input_tokens": 284,
+    "total_tokens": 339,
+    "input_token_details": {
+      "audio": 0,
+      "cache_read": 0
+    },
+    "output_token_details": {
+      "audio": 0,
+      "reasoning": 0
+    }
+  }
+}
+    ],
+  },
+  metadata: {
+    source: "loop",
+    step: 1,
+    parents: {},
+  },
+  next: [ "toolNode" ],
+  tasks: [
+    {
+      id: "a7612741-0af0-517a-ae54-98c433c5e231",
+      name: "toolNode",
+      path: [ "__pregel_pull", "toolNode" ],
+      interrupts: [],
+      result: undefined,
+    }
+  ],
+  parentConfig: {
+    configurable: {
+      checkpoint_ns: "",
+      thread_id: "1",
+      checkpoint_id: "1f149da3-56fe-65e0-8000-a8d0b8b7e616",
+    },
+    metadata: {
+      ls_integration: "langgraph",
+      thread_id: "1",
+    },
+    recursion_limit: 25,
+    tags: [],
+  },
+}
+chunk {
+  config: {
+    configurable: {
+      checkpoint_ns: "",
+      thread_id: "1",
+      checkpoint_id: "1f149da3-6636-6da0-8002-125f17aa4e3c",
+    },
+    metadata: {
+      ls_integration: "langgraph",
+      thread_id: "1",
+    },
+    recursion_limit: 25,
+    tags: [],
+  },
+  values: {
+    messages: [
+      HumanMessage {
+  "id": "c7a827a9-90ac-47c8-bc56-0db3c70c19e8",
+  "content": "give graph for yestruday expense",
+  "additional_kwargs": {},
+  "response_metadata": {}
+}, AIMessage {
+  "id": "chatcmpl-Dcm5inIY9lQxYYfpFU7QQgyqqM15l",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "id": "call_RNj0zaboEgfvNViZC0KIAtRX",
+        "type": "function",
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "tokenUsage": {
+      "promptTokens": 284,
+      "completionTokens": 55,
+      "totalTokens": 339
+    },
+    "finish_reason": "tool_calls",
+    "model_provider": "openai",
+    "model_name": "gpt-5.4-nano-2026-03-17"
+  },
+  "tool_calls": [
+    {
+      "name": "getChart",
+      "args": {
+        "type": "day",
+        "startDate": "2026-05-06T00:00:00.000Z",
+        "endDate": "2026-05-06T23:59:59.999Z"
+      },
+      "type": "tool_call",
+      "id": "call_RNj0zaboEgfvNViZC0KIAtRX"
+    }
+  ],
+  "invalid_tool_calls": [],
+  "usage_metadata": {
+    "output_tokens": 55,
+    "input_tokens": 284,
+    "total_tokens": 339,
+    "input_token_details": {
+      "audio": 0,
+      "cache_read": 0
+    },
+    "output_token_details": {
+      "audio": 0,
+      "reasoning": 0
+    }
+  }
+}, ToolMessage {
+  "id": "35c3b60a-0d5b-425f-b913-22bb51af1eee",
+  "content": "{\"data\":[{\"_id\":{\"year\":2026,\"month\":5,\"day\":6},\"label\":\"6-5\",\"expense\":35000}],\"type\":\"chart\"}",
+  "name": "getChart",
+  "additional_kwargs": {},
+  "response_metadata": {},
+  "tool_call_id": "call_RNj0zaboEgfvNViZC0KIAtRX"
+}
+    ],
+  },
+  metadata: {
+    source: "loop",
+    step: 2,
+    parents: {},
+  },
+  next: [],
+  tasks: [],
+  parentConfig: {
+    configurable: {
+      checkpoint_ns: "",
+      thread_id: "1",
+      checkpoint_id: "1f149da3-6606-6060-8001-d053df1dd05f",
+    },
+    metadata: {
+      ls_integration: "langgraph",
+      thread_id: "1",
+    },
+    recursion_limit: 25,
+    tags: [],
+  },
+}

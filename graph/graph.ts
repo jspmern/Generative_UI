@@ -4,10 +4,11 @@ import { END, MemorySaver, StateGraph } from "@langchain/langgraph";
 import { StateAnnotation } from "../state/State"
 import { expenseTracker } from "../tool/tools";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
+import type { LangGraphRunnableConfig } from "@langchain/langgraph";
 const checkpointer = new MemorySaver();
 
 /**Agent modal */
-async function initializeModal(state:typeof StateAnnotation.State)
+async function initializeModal(state:typeof StateAnnotation.State,config: LangGraphRunnableConfig)
 {
         /** */
         const response= await llm.bindTools(expenseTracker()).invoke([
@@ -18,6 +19,7 @@ async function initializeModal(state:typeof StateAnnotation.State)
             },
             ...state.messages
     ])
+         config.writer?.(`custom msg >>>>>>>>>>>>>>>>>>>>>`);
     return {messages:response}
     
 }
@@ -32,7 +34,7 @@ if(lastMessage.tool_calls?.length)
 }
 async function ShouldGoAI(state:typeof StateAnnotation.State){
     const lastMessage=state.messages[state.messages.length-1]
-    const type=JSON.parse(lastMessage.content)?.type
+    const type=JSON.parse(lastMessage.content )?.type
      if(type==="chart") return END
      return "initialize"
 }
