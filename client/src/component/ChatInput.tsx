@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 
-export function ChatInput() {
+export function ChatInput({handleSendMessage}) {
   const [input, setInput] = useState('');
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -8,6 +8,7 @@ export function ChatInput() {
     e.preventDefault();
     if (input.trim()) {
       console.log('You typed:', input.trim());
+      handleSendMessage(input.trim());
       setInput('');
       if (textareaRef.current) {
         textareaRef.current.style.height = 'auto';

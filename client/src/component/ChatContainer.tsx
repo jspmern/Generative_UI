@@ -1,10 +1,46 @@
+import { useState } from "react";
 import { ChatInput } from "./ChatInput";
 import { ChatMessage } from "./ChatMessage";
+import { fetchEventSource } from "@microsoft/fetch-event-source";
 
- 
-
-const messages = ['message1'];
 export function ChatContainer() {
+  const [messages,setMessages] = useState([]);
+  async function fetchData(input) {
+
+      await fetchEventSource("http://localhost:3000/chat", {
+
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          message: `${input}`,
+        }),
+
+        async onopen() {
+          console.log("Connection opened");
+        },
+
+        onmessage(ev) {
+          console.log("Received:", ev.data);
+        },
+
+        onerror(err) {
+          console.log("Error:", err);
+        },
+
+        onclose() {
+          console.log("Connection closed");
+        },
+      });
+    }
+ const handleSendMessage= async (input) => {
+  console.log("Sending message:", input);
+  await fetchData(input);
+ }
+
   return (
     <div className="flex flex-col h-screen w-full bg-zinc-950">
       {/* Header */}
@@ -119,7 +155,7 @@ export function ChatContainer() {
 
       {/* Input Area */}
       <div className="shrink-0 w-full">
-        <ChatInput />
+        <ChatInput  handleSendMessage={handleSendMessage} />
       </div>
     </div>
   );
