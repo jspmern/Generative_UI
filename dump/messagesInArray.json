@@ -1,0 +1,52 @@
+chunk [ "messages", [
+    AIMessageChunk {
+  "id": "chatcmpl-DdUYU357b2C7AjDwjjWxaJuTncZQu",
+  "content": "",
+  "additional_kwargs": {
+    "tool_calls": [
+      {
+        "index": 0,
+        "function": "[Object]"
+      }
+    ]
+  },
+  "response_metadata": {
+    "model_provider": "openai",
+    "usage": {}
+  },
+  "tool_calls": [],
+  "tool_call_chunks": [
+    {
+      "args": "\":\"",
+      "index": 0,
+      "type": "tool_call_chunk"
+    }
+  ],
+  "invalid_tool_calls": [
+    {
+      "name": "",
+      "args": "\":\"",
+      "error": "Malformed args.",
+      "type": "invalid_tool_call"
+    }
+  ]
+}, {
+      tags: [],
+      name: undefined,
+      ls_integration: "langchain_chat_model",
+      thread_id: "1",
+      langgraph_step: 1,
+      langgraph_node: "initialize",
+      langgraph_triggers: [ "branch:to:initialize" ],
+      langgraph_path: [ "__pregel_pull", "initialize" ],
+      langgraph_checkpoint_ns: "initialize:6625d158-de95-5a88-a293-10e85c421c2c",
+      checkpoint_ns: "initialize:6625d158-de95-5a88-a293-10e85c421c2c",
+      ls_provider: "openai",
+      ls_model_name: "gpt-5.4-nano-2026-03-17",
+      ls_model_type: "chat",
+      ls_temperature: undefined,
+      ls_max_tokens: undefined,
+      ls_stop: undefined,
+      versions: [Object ...],
+    }
+  ] ]
