@@ -3,6 +3,7 @@ import express from "express"
 import dotenv from "dotenv"
 import cors from "cors"
 import { app } from "./graph/graph"
+import type { streamMessage } from "./type"
 /**maintain session */
 /**update stream */
 // const config=  { configurable: { thread_id: "1" }, streamMode: "updates" }
@@ -63,9 +64,16 @@ server.post("/chat", async (req, res) => {
     messages: [{ role: "user", content: req.body.message }],
   }, config)
   for await (const [eventType, chunk] of result) {
+    let message: streamMessage= {} as streamMessage
+    const messageType=chunk[0].type
+    if(messageType==="ai"){
+       message={type:"ai",payload: {text: chunk[0].content as string}}
+    }
+    
+    
     console.log("eventType", eventType);
     // console.log("chunk",  JSON.stringify(chunk[0].content, null, 2));
-     res.write(`data: ${JSON.stringify(chunk[0].content)}\n\n`);
+     res.write(`data: ${JSON.stringify(message)}\n\n`);
   }
   // res.write(`data: ${JSON.stringify(data)}\n\n`);
   // res.write(
@@ -88,16 +96,16 @@ server.post("/chat", async (req, res) => {
 
   // }, 1000);
 
-  const heartbeat = setInterval(() => {
-    res.write(": ping\n\n");
-  }, 5000);
+  // const heartbeat = setInterval(() => {
+  //   res.write(": ping\n\n");
+  // }, 5000);
 
   res.on("close", () => {
 
     console.log("Client disconnected");
 
     //clearInterval(interval);
-    clearInterval(heartbeat);
+    // clearInterval(heartbeat);
 
     res.end();
   });

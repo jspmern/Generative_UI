@@ -38,7 +38,7 @@ const createExpense = tool(
       $lte:to
     }
   })
-    return `ToolResult: fetch Result is ${JSON.stringify(fetchResult)}`
+    return `${JSON.stringify(fetchResult)}`
  }, {
     name: "getExpense",
     description: "get expense in range",
