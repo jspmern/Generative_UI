@@ -19,7 +19,7 @@ import type { streamMessage } from "./type"
 // const config = { configurable: { thread_id: "1" }, streamMode: ["updates", "custom"] }
 
 
-const config = { configurable: { thread_id: "1" }, streamMode: ["messages"] }
+const config = { configurable: { thread_id: "1" }, streamMode: ["messages","custom"] }
 
 
 
@@ -65,56 +65,33 @@ server.post("/chat", async (req, res) => {
   }, config)
   for await (const [eventType, chunk] of result) {
     let message: streamMessage= {} as streamMessage
-    const messageType=chunk[0].type
-    if(messageType==="ai"){
+    console.log("eventType****", eventType);
+    if(eventType==="custom"){
+      console.log("chunk",chunk)
+      message=chunk
+    }
+    else if(eventType==="messages"){
+        const messageType=chunk[0].type
+        if(chunk[0].content=="")continue
+          if(messageType==="ai"){
        message={type:"ai",payload: {text: chunk[0].content as string}}
     }
-    
-    
-    console.log("eventType", eventType);
-    // console.log("chunk",  JSON.stringify(chunk[0].content, null, 2));
+    else if(messageType==="tool"){
+        message={type:"toolResult",payload:{
+           name:chunk[0].name,
+           result:JSON.parse(chunk[0].content as string)
+        }}
+    }
+    }
+   
      res.write(`data: ${JSON.stringify(message)}\n\n`);
   }
-  // res.write(`data: ${JSON.stringify(data)}\n\n`);
-  // res.write(
-  //   `data: ${JSON.stringify({
-  //     message: "SSE connected",
-  //   })}\n\n`
-  // );
-
-  // const interval = setInterval(() => {
-
-  //   const data = {
-  //     time: new Date(),
-  //     random: Math.random(),
-  //     userMessage: req.body.message,
-  //   };
-
-  //   console.log("sending", data);
-
-  //   res.write(`data: ${JSON.stringify(data)}\n\n`);
-
-  // }, 1000);
-
-  // const heartbeat = setInterval(() => {
-  //   res.write(": ping\n\n");
-  // }, 5000);
-
-  res.on("close", () => {
-
-    console.log("Client disconnected");
-
-    //clearInterval(interval);
-    // clearInterval(heartbeat);
-
-    res.end();
-  });
-
+  
+  res.end();
 });
 
 server.listen(3000, () => {
   console.log("Server running on 3000");
 });
 
-// main()
 

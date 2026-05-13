@@ -7,8 +7,10 @@ import type { streamMessage } from "../type/type";
 export function ChatContainer() {
 
   const [messages, setMessages] = useState<streamMessage[]>([]);
+ 
 
   async function fetchData(input: string) {
+  
 
     setMessages((pre) => {
       return [
@@ -22,6 +24,7 @@ export function ChatContainer() {
         },
       ];
     });
+     
 
     await fetchEventSource("http://localhost:3000/chat", {
 
@@ -34,16 +37,20 @@ export function ChatContainer() {
       body: JSON.stringify({
         message: input,
       }),
-
+       
       async onopen() {
         console.log("Connection opened");
       },
 
       onmessage(ev) {
 
-  const parsedData = JSON.parse(ev.data) as streamMessage;
-
-  console.log(parsedData);
+ let parsedData: streamMessage;
+        try {
+          parsedData = JSON.parse(ev.data) as streamMessage;
+        } catch (err) {
+          console.log("Skipping invalid SSE event:", ev.data);
+          return;
+        }
 
   if (parsedData.type === "ai") {
 
@@ -71,6 +78,16 @@ export function ChatContainer() {
       // otherwise add new AI message
       return [...pre, parsedData];
     });
+  }
+  else if(parsedData.type==="toolCall"){
+    setMessages((pre)=>{
+      return [...pre,{type:"toolCall",payload:parsedData.payload,id:Date.now().toString()}]
+    })
+  }
+   else if(parsedData.type==="toolResult"){
+    setMessages((pre)=>{
+      return [...pre,{type:"toolResult",payload:parsedData.payload,id:Date.now().toString()}]
+    })
   }
 }
 ,

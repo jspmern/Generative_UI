@@ -5,6 +5,8 @@ import { StateAnnotation } from "../state/State"
 import { expenseTracker } from "../tool/tools";
 import { ToolNode } from "@langchain/langgraph/prebuilt";
 import type { LangGraphRunnableConfig } from "@langchain/langgraph";
+import type { streamMessage } from "../type";
+import type { AIMessage } from "langchain";
 const checkpointer = new MemorySaver();
 
 /**Agent modal */
@@ -19,15 +21,22 @@ async function initializeModal(state:typeof StateAnnotation.State,config: LangGr
             },
             ...state.messages
     ])
-         config.writer?.(`custom msg >>>>>>>>>>>>>>>>>>>>>`);
     return {messages:response}
     
 }
 
-async function whereShouldGo(state:typeof StateAnnotation.State){
-const lastMessage=state.messages[state.messages.length-1]
+async function whereShouldGo(state:typeof StateAnnotation.State,config: LangGraphRunnableConfig){
+const lastMessage=state.messages[state.messages.length-1]  as AIMessage
 if(lastMessage.tool_calls?.length)
 {
+    const customMessage:streamMessage={
+      type:"toolCall",
+      payload:{
+        name:lastMessage.tool_calls[0]?.name,
+        args:lastMessage.tool_calls[0]?.args
+      }  
+    }
+    config.writer!(customMessage)
     return "toolNode"
 }
   return END
