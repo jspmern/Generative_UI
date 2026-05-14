@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChatInput } from "./ChatInput";
 import { ChatMessage } from "./ChatMessage";
 import { fetchEventSource } from "@microsoft/fetch-event-source";
@@ -7,6 +7,7 @@ import type { streamMessage } from "../type/type";
 export function ChatContainer() {
 
   const [messages, setMessages] = useState<streamMessage[]>([]);
+  const messageEndRef = useRef<HTMLDivElement>(null);
  
 
   async function fetchData(input: string) {
@@ -107,6 +108,9 @@ export function ChatContainer() {
 
     await fetchData(input);
   };
+  useEffect(()=>{
+    messageEndRef.current?.scrollIntoView({behavior:"smooth"})
+  },[messages])
 
   return (
     <div className="flex flex-col h-screen w-full bg-zinc-950">
@@ -263,7 +267,7 @@ export function ChatContainer() {
           )}
 
         </div>
-
+          <div ref={messageEndRef}/>
       </div>
 
       {/* Input Area */}
