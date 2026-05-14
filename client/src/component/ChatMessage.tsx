@@ -1,5 +1,6 @@
 import { User,UserStar, Wrench } from 'lucide-react';
 import type { streamMessage } from '../type/type';
+import { ChartLayout } from './ChartLayout';
 type props={
   message:streamMessage
 }
@@ -98,6 +99,8 @@ export function ChatMessage({message}:props) {
             )}
           </div>
           </div>
+          <div>
+             { message.payload.name==="getChart" && message.payload.result && <ChartLayout result={message.payload.result}/>}</div> 
       </div>
     );
   
